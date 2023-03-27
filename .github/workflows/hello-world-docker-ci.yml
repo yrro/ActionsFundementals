@@ -21,6 +21,5 @@ on:
         with:
           who-to-greet: 'everyone'
 
-      - name: Output time from the action
-        run: echo "Time output: ${{ steps.hello-action.outputs.time }}"
+      - run: echo "time:${{ steps.hello-action.outputs.time }}"
         shell: bash
