@@ -4,4 +4,4 @@ set -eu -o pipefail
 
 echo "Hello, ${1}!"
 
-echo "datetime=$(date)" >> $GITHUB_OUTPUT
+echo "time=$(date)" >> $GITHUB_OUTPUT
