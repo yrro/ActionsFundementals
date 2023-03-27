@@ -8,18 +8,18 @@ on:
     
   workflow_dispatch: ~
   
-  jobs:
-  
-    Build:
-      runs-on: ubuntu-latest
-      steps:
-      
-      - uses: actions/checkout@v3
-      
-      - id: hello-action
-        uses: ./hello-world-docker-action
-        with:
-          who-to-greet: 'everyone'
+jobs:
 
-      - run: echo "time:${{ steps.hello-action.outputs.time }}"
-        shell: bash
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+
+    - uses: actions/checkout@v3
+
+    - id: hello-action
+      uses: ./hello-world-docker-action
+      with:
+        who-to-greet: 'everyone'
+
+    - run: echo "time: ${{ steps.hello-action.outputs.time }}"
+      shell: bash
