@@ -1,0 +1,32 @@
+name: GitHub Actions demo
+
+on:
+  
+  push:
+    branches: main
+    paths-ignore:
+    - .github/**
+  
+  pull_request:
+    branches: main
+  
+  schedule:
+    - cron: 15 6 * * Sun
+  
+jobs:
+
+  build:
+    runs-on: ubuntu:latest
+    steps:
+    
+      - name: Output name of even that triggered workflow
+        run: echo ${{ github.event_name }}
+        shell: bash
+      
+      - name: Output branch name
+        run: echo ${{ github.ref_name }}
+        shell: bash
+      
+      - name: List files
+        run: find -type f
+        shell: bash
