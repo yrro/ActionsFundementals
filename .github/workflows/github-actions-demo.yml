@@ -14,6 +14,8 @@ on:
   
   schedule:
     - cron: 15 6 * * Sun
+    
+  workflow_dispatch: {}
   
 jobs:
 
