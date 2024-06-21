@@ -66,3 +66,4 @@ For this workshop you need the following:
 - It is recommended to have a second screen for the hand-on labs
 
 <!-- commit to trigger a workflow run -->
+<!-- commit for PR -->
